@@ -42,7 +42,7 @@ namespace VisualHG
         }
         
         public virtual int FContinueMessageLoop(uint uReason, IntPtr pvLoopData, MSG[] pMsgPeeked)
-        { return 0;  }
+        { return 1;  }
 
         /// <summary>
         /// Idle processing trigger method
@@ -58,11 +58,11 @@ namespace VisualHG
         public virtual int FPreTranslateMessage(MSG[] pMsg)
         { return 0; }
         public virtual int FQueryTerminate(int fPromptUser)
-        { return 0; }
+        { return 1; }
         public virtual int FReserved1(uint dwReserved, uint message, IntPtr wParam, IntPtr lParam)
         { return 0; }
         public virtual IntPtr HwndGetWindow(uint dwWhich, uint dwReserved)
-        { return new IntPtr(); }
+        { return IntPtr.Zero; }
         public virtual void OnActivationChange(IOleComponent pic, int fSameComponent, OLECRINFO[] pcrinfo, int fHostIsActivating, OLECHOSTINFO[] pchostinfo, uint dwReserved)
         { ; }
         public virtual void OnAppActivate(int fActive, uint dwOtherThreadID)
