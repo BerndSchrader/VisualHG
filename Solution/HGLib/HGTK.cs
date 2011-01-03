@@ -99,9 +99,15 @@ namespace HGLib
           {
             // copy latest file revision from repo temp folder
             string currentFile = file;
-            string versionedFile = Path.GetTempPath() + sccFile.Substring(sccFile.LastIndexOf("\\") + 1);
+            string versionedFile = Path.GetTempPath() + sccFile.Substring(sccFile.LastIndexOf("\\") + 1) + "(base)";
             string cmd = "cat \"" + sccFile.Substring(root.Length + 1) + "\"  -o \"" + versionedFile + "\"";
             InvokeCommand("hg.exe", root, cmd);
+            
+            // wait file exists on disk
+            int counter = 0;
+            while(!File.Exists(versionedFile) && counter < 10)
+            { Thread.Sleep(1); ++counter; }
+            
             // run diff tool
             cmd = "\"" + versionedFile + "\" \"" + currentFile + "\"";
             InvokeCommand(HGSetup.GetDiffTool(root), root, cmd);
