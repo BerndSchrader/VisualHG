@@ -179,8 +179,8 @@ namespace HGLib
                     fileList = string.Empty;
                 }
 
-                if(fileList.Length>0)
-                    fileList += " , " + files[n];
+                if (fileList.Length > 0)
+                    fileList += "\t" + files[n];
                 else
                     fileList += files[n];
             }
