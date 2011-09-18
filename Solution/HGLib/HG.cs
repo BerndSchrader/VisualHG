@@ -392,7 +392,7 @@ namespace HGLib
             QueryFileStatus(fileList, out statusDictionary);
             foreach (var k in statusDictionary)
             {
-              if (k.Value == '?' && k.Value != 'I')
+              if (k.Value == '?' || k.Value == 'R')
               {
                 addFilesList.Add(k.Key);
               }

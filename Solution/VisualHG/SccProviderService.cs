@@ -608,7 +608,8 @@ namespace VisualHG
 
             HGLib.HGFileStatusInfo info;
             _sccStatusTracker.GetFileStatusInfo(rgpszMkDocuments[0], out info);
-            if (info == null || info.status == HGLib.HGFileStatus.scsUncontrolled) // do not add files twice
+            if (info == null || info.status == HGLib.HGFileStatus.scsRemoved ||    // undelete file
+                                info.status == HGLib.HGFileStatus.scsUncontrolled) // do not add files twice
             {
                 // add only files wich are not ignored
                 if (Configuration.Global._autoAddFiles)

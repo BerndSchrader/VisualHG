@@ -273,10 +273,9 @@ namespace HGLib
               foreach (string file in fileListRaw)
               {
                 HGFileStatusInfo info;
-                if(!_fileStatusDictionary.TryGetValue(file.ToLower(), out info) ||
-                        (info.status == HGFileStatus.scsUncontrolled && info.status != HGFileStatus.scsIgnored))
+                if(!_fileStatusDictionary.TryGetValue(file.ToLower(), out info) || info.status != HGFileStatus.scsIgnored)
                 {
-                  fileList.Add(file);
+                    fileList.Add(file);
                 }
               }
             }
