@@ -3,11 +3,47 @@
 Mercurial source code provider plugin for Visual Studio 2008
 
 Author    : Bernd Schrader
-Version   : 1.1.5
+Version   : 1.1.6
 State     : stable
 Licence   : GNU General Public License (GPL) (v2.0)
 
 -------------------------------------------------------
+
+VisualHG 2010 - 2013 codebase
+-----------------------------
+
+Get the source code
+
+  clone the repository from http://hg.sharesource.org/visualhg
+
+Usage of the VisualHG build environment requires at least:
+
+  Visual Studio 2010 Professional Edition or Higher
+  Visual Studio 2010 SDK
+
+Usage of the VisualHG itself requires at least:
+
+  Mercurial and TortoiseHG installed
+  
+Experimental Hive Options
+
+	You can start Visual Studio with the experimental hive if you copy
+	the following settings to the debug command of the VisualHG project.
+
+	Right-click the VisualHG project and select the "Properties" option.
+	Select the Debug tab and put the path to devenv.exe for your appropriate
+	version of VS.NET into the "Start External Program" field.
+	
+	Start External Program:
+		C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\devenv.exe
+	
+	Command line arguments:
+		/ranu /rootsuffix Exp /noVSIP /Log
+
+
+
+VisualHG 2005 - 2008 codebase
+-----------------------------
 
 Get the source code
 
