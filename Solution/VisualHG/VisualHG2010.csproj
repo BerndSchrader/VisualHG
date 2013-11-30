@@ -134,13 +134,15 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="Resources\Images_24bit.bmp">
-      <IncludeInVSIX>true</IncludeInVSIX>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="Resources\Images_32bit.bmp" />
     <None Include="source.extension.vsixmanifest" />
     <EmbeddedResource Include="Resources\StatusGlyphs.bmp" />
-    <None Include="Resources\Product.ico" />
+    <Content Include="Resources\Product.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <VSCTCompile Include="PkgCmd.vsct">

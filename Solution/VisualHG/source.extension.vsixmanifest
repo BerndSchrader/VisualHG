@@ -8,7 +8,7 @@
     <Locale>1033</Locale>
     <MoreInfoUrl>http://visualhg.codeplex.com/</MoreInfoUrl>
     <License>License.txt</License>
-    <Icon>Images_24bit.bmp</Icon>
+    <Icon>Resources\Product.ico</Icon>
     <InstalledByMsi>false</InstalledByMsi>
     <SupportedProducts>
       <VisualStudio Version="10.0">

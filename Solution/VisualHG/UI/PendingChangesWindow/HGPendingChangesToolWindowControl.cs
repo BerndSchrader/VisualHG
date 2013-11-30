@@ -3,10 +3,11 @@ using System.Globalization;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Windows.Forms;
-
+using System.Drawing;
 using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
+
 
 namespace VisualHG
 {
