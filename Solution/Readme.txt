@@ -3,13 +3,13 @@
 Mercurial source code provider plugin for Visual Studio 2008
 
 Author    : Bernd Schrader
-Version   : 1.1.6
+Version   : 1.1.7
 State     : stable
 Licence   : GNU General Public License (GPL) (v2.0)
 
 -------------------------------------------------------
 
-VisualHG 2010 - 2013 codebase
+VisualHG 2010 - 2015 codebase
 -----------------------------
 
 Get the source code
